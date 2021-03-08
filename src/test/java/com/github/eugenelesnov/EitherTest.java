@@ -27,7 +27,7 @@ class EitherTest {
 
         @Test
         void shouldReturnLeftImplementation() {
-            assertThat(either).isOfAnyClassIn(Left.class);
+            assertThat(either).isInstanceOf(Left.class);
         }
 
         @Test
@@ -60,7 +60,7 @@ class EitherTest {
 
         @Test
         void shouldReturnRightImplementation() {
-            assertThat(either).isOfAnyClassIn(Right.class);
+            assertThat(either).isInstanceOf(Right.class);
         }
 
         @Test
