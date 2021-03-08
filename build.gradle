@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'info.solidsoft.pitest' version '1.5.2'
 }
 
 group 'com.github.eugenelesnov'
@@ -9,13 +10,25 @@ repositories {
     mavenCentral()
 }
 
+configurations.maybeCreate('pitest')
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testImplementation 'org.assertj:assertj-core:3.19.0'
 
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    pitest 'org.pitest:pitest-junit5-plugin:0.12'
 }
 
 test {
     useJUnitPlatform()
+}
+
+pitest {
+    testPlugin = 'junit5'
+    targetClasses = ['com.github.eugenelesnov.*']
+    pitestVersion = '1.5.2'
+    threads = 4
+    outputFormats = ['HTML']
+    timestampedReports = false
 }
