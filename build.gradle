@@ -26,9 +26,10 @@ test {
 
 pitest {
     testPlugin = 'junit5'
-    targetClasses = ['com.github.eugenelesnov.*']
+    junit5PluginVersion = '0.12'
     pitestVersion = '1.5.2'
     threads = 4
-    outputFormats = ['HTML']
+    targetClasses = ['com.github.eugenelesnov.*']
+    outputFormats = ['XML', 'HTML']
     timestampedReports = false
 }
