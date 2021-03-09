@@ -1,7 +1,6 @@
 plugins {
     id 'java'
     id 'jacoco'
-    id 'info.solidsoft.pitest' version '1.5.2'
 }
 
 group 'com.github.eugenelesnov'
@@ -11,14 +10,11 @@ repositories {
     mavenCentral()
 }
 
-configurations.maybeCreate('pitest')
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
     testImplementation 'org.assertj:assertj-core:3.19.0'
 
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-
-    pitest 'org.pitest:pitest-junit5-plugin:0.12'
 }
 
 test {
@@ -33,13 +29,3 @@ jacocoTestReport {
 }
 
 check.dependsOn jacocoTestReport
-
-pitest {
-    testPlugin = 'junit5'
-    junit5PluginVersion = '0.12'
-    pitestVersion = '1.5.2'
-    threads = 4
-    targetClasses = ['com.github.eugenelesnov.*']
-    outputFormats = ['XML', 'HTML']
-    timestampedReports = false
-}
