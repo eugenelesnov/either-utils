@@ -1,5 +1,6 @@
 [![](https://jitpack.io/v/EugeneLesnov/either-utils.svg)](https://jitpack.io/#EugeneLesnov/either-utils)
 [![Build Status](https://travis-ci.com/EugeneLesnov/either-utils.svg?branch=master)](https://travis-ci.com/EugeneLesnov/either-utils)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 # either-utils
